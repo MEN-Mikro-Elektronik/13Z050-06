@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="packagedesc.xsd">
+	<name>13z05006</name>
+	<description>MDIS5 driver package for BIOC/D302i GPIO</description>
+	<date>2017-04-28</date>
+	<revision>Release-1.1</revision>
+	<docroot>DRIVERS/MDIS_LL/Z050/DOC/html/index.html</docroot>
+	<!-- Models -->
+	<modellist>
+		<model>
+			<!-- standard model -->
+			<hwname>16Z050_BIO</hwname>
+			<description>Binary input/output controller in Chameleon FPGA</description>
+			<devnameprefix>BIOC</devnameprefix>
+			<devtype>MDIS</devtype>
+            <autoid>
+                <chamunitid>0x1e</chamunitid>
+                <chamv2id>50</chamv2id>
+            </autoid>
+            <bbslot>
+                <bbismodel>CHAMELEON</bbismodel>
+            </bbslot>
+            <bbslot>
+                <bbismodel>CHAMELEON_PCITBL</bbismodel>
+            </bbslot>
+			<swmodulelist>
+				<swmodule>
+					<name>z50</name>
+					<description>GPIO Driver</description>
+					<type>Low Level Driver</type>
+					<makefilepath>Z050/DRIVER/COM/driver.mak</makefilepath>
+				</swmodule>
+			</swmodulelist>
+		</model>
+		<model>
+			<!-- standard model -->
+			<hwname>16Z050_BIO</hwname>
+			<modelname>16Z050_BIO_IO</modelname>
+			<description>Binary input/output controller in Chameleon FPGA (io mapped)</description>
+			<devnameprefix>BIOC</devnameprefix>
+			<devtype>MDIS</devtype>
+            <autoid>
+                <chamunitid>0x1e</chamunitid>
+                <chamv2id>50</chamv2id>
+            </autoid>
+            <bbslot>
+                <bbismodel>CHAMELEON</bbismodel>
+            </bbslot>
+            <bbslot>
+                <bbismodel>CHAMELEON_PCITBL</bbismodel>
+            </bbslot>
+			<swmodulelist>
+				<swmodule>
+					<name>z50_io</name>
+					<description>GPIO Driver</description>
+					<type>Low Level Driver</type>
+					<makefilepath>Z050/DRIVER/COM/driver_io.mak</makefilepath>
+				</swmodule>
+			</swmodulelist>
+		</model>
+	</modellist>
+	<settinglist>
+		<setting hidden="true">
+		    <name>IRQ_ENABLE</name>
+			<description>enable irq after init</description>
+			<type>U_INT32</type>
+			<value>1</value>
+			<defaultvalue>1</defaultvalue>
+		</setting>
+		<setting>
+			<name>Z50_D302I</name>
+			<description>Enable support for MEN D302i board</description>
+			<type>U_INT32</type>
+			<defaultvalue>0</defaultvalue>
+		</setting>
+    </settinglist>
+	<!-- Global software modules -->
+	<swmodulelist>
+		<swmodule internal="false">
+			<name>z50_simp</name>
+			<description>Example program for Z50 GPIO driver</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>Z050/EXAMPLE/Z50_SIMP/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule internal="true">
+			<name>z50_debounce</name>
+			<description>Test program for input debouncing</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>Z050/TOOLS/Z50_DEBOUNCE/COM/program.mak</makefilepath>
+		</swmodule>
+	</swmodulelist>
+</package>

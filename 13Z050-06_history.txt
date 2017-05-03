@@ -1,0 +1,12 @@
+===== [ History of fileset ART/13Z050-06/13Z050-06 ] =====
+
+
+-----[ Release-1.1 ]-----
+[ 2017-04-28 14:27:07 by DPfeuffer ]
+R: MDIS5 driver required
+M: driver ported to MDIS5
+
+-----[ Release-1.0 ]-----
+[ 2004-11-29 09:01:19 by ub ]
+Initial Revision
+

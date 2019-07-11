@@ -1,24 +1,33 @@
 #***************************  M a k e f i l e  *******************************
 #
 #         Author: dp
-#          $Date: 2017/04/28 14:14:25 $
-#      $Revision: 1.1 $
 #
 #    Description: Makefile definitions for the Z50 driver (IO mapped)
 #
-#---------------------------------[ History ]---------------------------------
-#
-#   $Log: driver_io.mak,v $
-#   Revision 1.1  2017/04/28 14:14:25  DPfeuffer
-#   Initial Revision
-#
 #-----------------------------------------------------------------------------
-#   (c) Copyright 2016 by MEN mikro elektronik GmbH, Nuernberg, Germany
+#   Copyright 2016-2019, MEN Mikro Elektronik GmbH
 #*****************************************************************************
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 MAK_NAME=z50_io
+# the next line is updated during the MDIS installation
+STAMPED_REVISION="13Z050-06_01_02-0-g18fac97-dirty_2017-05-03"
 
-MAK_SWITCH=$(SW_PREFIX)MAC_IO_MAPPED
+DEF_REVISION=MAK_REVISION=$(STAMPED_REVISION)
+
+MAK_SWITCH=$(SW_PREFIX)MAC_IO_MAPPED \
+		$(SW_PREFIX)$(DEF_REVISION)
 
 MAK_LIBS=$(LIB_PREFIX)$(MEN_LIB_DIR)/desc$(LIB_SUFFIX)	\
          $(LIB_PREFIX)$(MEN_LIB_DIR)/oss$(LIB_SUFFIX)	\

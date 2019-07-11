@@ -3,23 +3,30 @@
  *        \file  d302i.h
  *
  *      \author  ulrich.bogensperger@men.de
- *        $Date: 2004/11/29 09:00:31 $
- *    $Revision: 1.1 $
  *
  *       \brief  Definitions for D302 "Model Infineon" hardware registers
  *               
  *    \switches  
- */
- /*-------------------------------[ History ]--------------------------------
- *
- * $Log: d302i.h,v $
- * Revision 1.1  2004/11/29 09:00:31  ub
- * Initial Revision
  *
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 2004 by MEN mikro elektronik GmbH, Nuernberg, Germany
+ * Copyright 2004-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
+
+ /*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #ifndef _D302I_H
 #define _D302I_H

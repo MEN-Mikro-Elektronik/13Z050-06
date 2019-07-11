@@ -3,8 +3,6 @@
  *        \file  z50_drv.c
  *
  *      \author  ulrich.bogensperger@men.de
- *        $Date: 2017/04/28 14:14:21 $
- *    $Revision: 1.2 $
  *
  *      \brief Low-level driver for MEN D302 board (Model "Infineon") and
  *      Binary Input Output Controller (BIOC) implemented in Chameleon FPGA
@@ -12,21 +10,26 @@
  *     Required: OSS, DESC, DBG libraries
  *
  *     \switches _ONE_NAMESPACE_PER_DRIVER_
- */
- /*-------------------------------[ History ]--------------------------------
- *
- * $Log: z50_drv.c,v $
- * Revision 1.2  2017/04/28 14:14:21  DPfeuffer
- * R: MDIS5 driver required
- * M: driver ported to MDIS5
- *
- * Revision 1.1  2004/11/29 09:00:28  ub
- * Initial Revision
  *
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 2004 by MEN Mikro Elektronik GmbH, Nuernberg, Germany
+ * Copyright 2004-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
+
+ /*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #define _NO_LL_HANDLE       /* ll_defs.h: don't define LL_HANDLE struct */
 
@@ -42,6 +45,7 @@
 
 #include "d302i.h"          /* register definitions for D302 Infineon */
 
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 /*-----------------------------------------+
 |  DEFINES                                 |
@@ -961,7 +965,7 @@ static int32 Z50_Info(
  */
 static char* Ident( void )
 {
-    return( "Z50 - Z50 low level driver: $Id: z50_drv.c,v 1.2 2017/04/28 14:14:21 DPfeuffer Exp $" );
+    return( (char*) IdentString );
 }
 
 /********************************* Cleanup *********************************/

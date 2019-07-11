@@ -6,8 +6,6 @@
 /*!
  *         \file z50_simp.c
  *       \author ulrich.bogensperger@men.de
- *        $Date: 2017/04/28 14:14:37 $
- *    $Revision: 1.2 $
  *
  *       \brief  Simple example program for the Z50 driver
  *
@@ -16,22 +14,27 @@
  *
  *     Required: libraries: mdis_api, usr_oss
  *     \switches (none)
- */
- /*-------------------------------[ History ]--------------------------------
  *
- * $Log: z50_simp.c,v $
- * Revision 1.2  2017/04/28 14:14:37  DPfeuffer
- * R: MDIS5 driver required
- * M: driver ported to MDIS5
- *
- * Revision 1.1  2004/11/29 09:00:40  ub
- * Initial Revision
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 2004 by MEN mikro elektronik GmbH, Nuernberg, Germany
+ * Copyright 2004-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 
-static const char RCSid[]="$Id: z50_simp.c,v 1.2 2017/04/28 14:14:37 DPfeuffer Exp $";
+ /*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 
 #include <stdio.h>
 #include <string.h>
@@ -39,6 +42,8 @@ static const char RCSid[]="$Id: z50_simp.c,v 1.2 2017/04/28 14:14:37 DPfeuffer E
 #include <MEN/mdis_api.h>
 #include <MEN/usr_oss.h>
 #include <MEN/z50_drv.h>
+
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 /*--------------------------------------+
 |   DEFINES                             |

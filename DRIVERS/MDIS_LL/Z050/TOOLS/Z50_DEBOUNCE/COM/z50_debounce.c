@@ -6,8 +6,6 @@
 /*!
  *         \file z50_debounce.c
  *       \author ulrich.bogensperger@men.de
- *        $Date: 2017/04/28 14:14:39 $
- *    $Revision: 1.2 $
  *
  *        \brief Demonstration of Z50 debouncing capabilities
  *               This assumes that every input is wired to its corresponding
@@ -15,22 +13,27 @@
  *
  *     Required: libraries: mdis_api, usr_oss, usr_utl
  *     \switches (none)
- */
- /*-------------------------------[ History ]--------------------------------
  *
- * $Log: z50_debounce.c,v $
- * Revision 1.2  2017/04/28 14:14:39  DPfeuffer
- * R: MDIS5 driver required
- * M: driver ported to MDIS5
- *
- * Revision 1.1  2004/11/29 09:00:42  ub
- * Initial Revision
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 2004 by MEN mikro elektronik GmbH, Nuernberg, Germany
+ * Copyright 2004-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 
-static const char RCSid[]="$Id: z50_debounce.c,v 1.2 2017/04/28 14:14:39 DPfeuffer Exp $";
+ /*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -42,6 +45,8 @@ static const char RCSid[]="$Id: z50_debounce.c,v 1.2 2017/04/28 14:14:39 DPfeuff
 #include <MEN/usr_utl.h>
 #include <MEN/mdis_api.h>
 #include <MEN/z50_drv.h>
+
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 /*--------------------------------------+
 |   DEFINES                             |
@@ -92,10 +97,25 @@ static void usage(void)
     printf("  -v=<n>       verbosity (0..3)................ [0]       \n");
     printf("  -d           use D302i ...................... [no]      \n");
     printf("\n");
-    printf("(c) 2004 by MEN mikro elektronik GmbH\n\n");
+	printf("Copyright 2004-2019, MEN Mikro Elektronik GmbH\n%s\n", IdentString);
 }
 
-/********************************* main ************************************/
+ ****************************************************************************/
+
+ /*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 /** Program main function
  *
  *  \param argc       \IN  argument counter

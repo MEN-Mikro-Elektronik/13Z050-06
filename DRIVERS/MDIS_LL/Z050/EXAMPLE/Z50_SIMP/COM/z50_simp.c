@@ -75,8 +75,8 @@ static int getDebounce( MDIS_PATH path, u_int32 input, u_int16 *value );
 int main(int argc, char *argv[])
 {
     MDIS_PATH path;
-    u_int32   inp;
-    u_int16   dbValue;
+    int32   inp;
+    u_int16   dbValue=0;
     char      *device;
     char      buf1[40], buf2[40];
     int       i, maxCnt, bitShift=BIT_SHIFT;
@@ -133,7 +133,8 @@ int main(int argc, char *argv[])
     |  output values      |
     +--------------------*/
     for( i=0; i<maxCnt; ++i ) {
-        u_int32 raise, fall, out;
+        int32 raise, fall;
+        u_int32 out;
 
         if( bitShift )
             out = 1 << i;

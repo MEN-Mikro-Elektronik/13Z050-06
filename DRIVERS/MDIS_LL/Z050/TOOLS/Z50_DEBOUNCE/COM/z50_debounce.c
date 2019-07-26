@@ -110,7 +110,8 @@ int main(int argc, char *argv[])
 {
     int32     chan, i, timeref, useD302i;
     MDIS_PATH path=0;
-    u_int32   oldInp=0, oldTime=0;
+    int32     oldInp=0;
+    u_int32   oldTime=0;
     char      *device,*str,*errstr,buf[40];
     u_int32	  n;
 
@@ -202,7 +203,8 @@ int main(int argc, char *argv[])
     timeref = UOS_MsecTimerGet();
 
     while( (UOS_MsecTimerGet() - timeref) < 2000 ) {
-        u_int32 inp, time;
+        int32 inp;
+        u_int32 time;
         char    buf[80];
 
         FAIL_UNLESS( M_read( path, &inp ) == 0 );

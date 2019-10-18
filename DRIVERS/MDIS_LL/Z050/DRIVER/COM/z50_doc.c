@@ -206,14 +206,6 @@
 
     \subsection z50_simp  Simple example for using the driver
     z50_simp.c (see example section)
-
-    \subsection z50_min   Minimum descriptor
-    z50_min.dsc
-    demonstrates the minimum set of options necessary for using the drver.
-
-    \subsection z50_max   Minimum descriptor
-    z50_max.dsc
-    shows all possible configuration options for this driver.
 */
 
 /** \example z50_simp.c
